@@ -19,7 +19,6 @@ let imageIndex = 1;
 let songIndex = 1;
 let timerId = null;
 let timing = timingInput.value * 1000;
-audioElement.crossOrigin = 'anonymous';
 
 const images_list = [
     {path: "media/img/pexels-adrien-olichon-2931251.jpg", desc: "Абстракция 1"},
@@ -122,7 +121,7 @@ function setAudio() {
 }
 
 let num, array, lines, analyser, src, height, context;
-lines = document.getElementsByClassName('stroke');
+lines = document.getElementsByClassName('line');
 num = lines.length;
 
 function loadEqualizer()
@@ -132,6 +131,7 @@ function loadEqualizer()
     src = context.createMediaElementSource(audioElement);
     src.connect(analyser);
     analyser.connect(context.destination);
+    console.log("loop")
     loop();
 }
 function loop() 
@@ -165,5 +165,6 @@ nextSong.addEventListener("click", nextAudio);
 prevSong.addEventListener("click", prevAudio);
 
 showImage();
+loadEqualizer()
 setAudio();
 

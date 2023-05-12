@@ -84,7 +84,9 @@ function toggleAudio() {
         loadEqualizer();
     }
     if (audioElement.paused) {
+        context.resume()
         audioElement.play();
+
         playPauseSong.firstChild.src = "static/pause.svg";
     } else {
         audioElement.pause();
@@ -111,7 +113,7 @@ function prevAudio() {
 }
 
 function setAudio() {
-    if (audioElement.paused) {
+    if (!audioElement.paused) {
         audioElement.pause();
         playPauseSong.firstChild.src = "static/play.svg";``
     }

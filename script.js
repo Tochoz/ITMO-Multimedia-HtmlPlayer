@@ -1,6 +1,5 @@
 const image = document.getElementById("image");
 const imgText = document.getElementById("img-text");
-const sliderAudio = document.getElementById("slider-audio");
 const prevImg = document.getElementById("prev-img");
 const playPauseImg = document.getElementById("play-pause-img");
 const nextImg = document.getElementById("next-img");
@@ -8,7 +7,6 @@ const timingInput = document.getElementById("timing-input");
 const timingBtn = document.getElementById("timing-btn");
 
 const audioElement = document.getElementById("audio-tag");
-//const audioSource = document.getElementById('audio-source');
 const prevSong = document.getElementById("prev-song");
 const playPauseSong = document.getElementById("play-pause-song");
 const nextSong = document.getElementById("next-song");
@@ -113,6 +111,10 @@ function prevAudio() {
 }
 
 function setAudio() {
+    if (audioElement.paused) {
+        audioElement.pause();
+        playPauseSong.firstChild.src = "static/play.svg";``
+    }
     audioElement.src = songs_list[songIndex-1].path;
     audioElement.load();
     

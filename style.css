@@ -1,0 +1,156 @@
+#img-text {
+    bottom: 0;
+    
+    padding: 10px;
+    font-size: 18px;
+}
+html {
+    height: 100%;
+}
+body{
+    background-color: #FEFAE0;
+    margin: 0;
+    min-height: 100%;
+    font-family: Arial;
+}
+.container{
+    min-width: 500px;
+    width: 60%;
+    margin: 0 auto;
+    background-color: #606C38;
+    height: 100vh;
+    padding: 5% 0px;
+    box-sizing: border-box;
+}
+.panels{
+    width: 90%;
+    margin: 0 auto;
+}
+#img-panel {
+    padding: 5px 10px 0 10px;
+    height: 60px;
+    border: black 4px solid;
+    border-bottom-style: none;
+    border-radius: 10px 10px 0 0;
+    width: 70%;
+    max-width: 450px;
+    margin: 10px auto 0 auto;
+    
+}
+#img-panel > * {
+    height: 60px;
+}
+.panels > * > *, .panels > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#song-panel{
+    padding: 5px 10px;
+    border: black 4px solid;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 640px;
+    height: 70px;
+}
+#song-panel > * {
+    height: 60px;
+}
+
+#timing-input{
+    display: block;
+    box-sizing: border-box;
+    width: 50px;
+    margin-right: 10px;
+    height: 60%;
+    padding-left: 0.7em;
+}
+#timing-btn{
+    height: 60%;
+    display: block;
+    background-color: white;
+    border: black 2px solid;
+    border-radius: 5px;
+}
+#timing-btn:hover{
+    background-color: #cccccc;
+}
+
+#timing-btn:active{
+    background-color: #999999;
+}
+
+.img-container{
+    margin: 30px auto;
+    width: fit-content;
+    align-items: center;
+}
+#image{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.ico{
+    height: 100%;
+    color: black;
+    display: block;
+}
+.arrow{
+    height: 50%;
+}
+
+.gap{
+    width: 15px;
+    
+}
+
+.song-container{
+    display: block;
+    color: white;
+    width: 300px;
+}
+
+.song-name{
+    margin-top: 15px;
+    margin-bottom: 0.2em;
+    font-weight: bold;
+}
+.song-author{
+    margin-left: 0.5em;
+    font-size: 80%;
+}
+
+.controls-container > *{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wave{
+    margin: 0 auto;
+    width: 180px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line
+{
+    background: #f1f1f1;
+
+    max-height: 60px;
+    min-height: 12px;
+    height: 12px;
+    width: 10px;
+
+    border-radius: 50px;
+
+    margin: 0 2.5px;
+
+    transition: 0.15s ease-out;
+}

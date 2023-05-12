@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Player</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <div class="container">
+      <div class="img-container">
+        <img id="image" src="">
+      </div>
+    <div class="panels">  
+    <div id="img-panel">
+      <div id="img-text"></div>
+      <div class="gap"></div>
+        <div id="prev-img" ><img class="ico arrow" src="static/left.svg"></div>
+        <div id="play-pause-img"><img class="ico" src="static/play.svg"></div>
+        <div id="next-img"><img class="ico arrow" src="static/right.svg"></div>
+      <div class="gap"></div>
+      <input id="timing-input" type="number" min="1" max="10" value="2">
+      <button id="timing-btn">Set Timing</button>
+      </div>
+      
+      <div id="song-panel">
+        <audio id="audio-tag"></audio>
+        <div class="controls-container">
+          <div id="prev-song"><img class="ico arrow" src="static/prevsong.svg"></div>
+          <div id="play-pause-song"><img class="ico" src="static/play.svg"></div>
+          <div id="next-song"><img class="ico arrow" src="static/nextsong.svg"></div>
+        </div>
+        <div class="gap"></div>
+        <div class="song-container">
+        <div class="song-name"></div>
+        <div class="song-author"></div>
+        </div>
+      </div>
+      <div class="wave">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>  
+    </div>
+      <script src="script.js" defer></script>
+    </div>
+  </body>
+  
+</html>

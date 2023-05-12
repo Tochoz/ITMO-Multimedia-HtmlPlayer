@@ -142,6 +142,7 @@ function loop()
 {
     if(!audioElement.paused)
     {
+        context.resume()
         window.requestAnimationFrame(loop);
     }
 
@@ -167,6 +168,7 @@ timingBtn.addEventListener("click", setTiming);
 playPauseSong.addEventListener("click", toggleAudio);
 nextSong.addEventListener("click", nextAudio);
 prevSong.addEventListener("click", prevAudio);
+audioElement.addEventListener('ended', nextAudio);
 
 showImage();
 loadEqualizer()

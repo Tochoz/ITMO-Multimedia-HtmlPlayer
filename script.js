@@ -122,6 +122,7 @@ function setAudio() {
     
     nameSong.innerHTML = songs_list[songIndex-1].name;
     authorSong.innerHTML = songs_list[songIndex-1].author;
+    loop();
 }
 
 let num, array, lines, analyser, src, height, context;
@@ -142,7 +143,6 @@ function loop()
 {
     if(!audioElement.paused)
     {
-        context.resume()
         window.requestAnimationFrame(loop);
     }
 

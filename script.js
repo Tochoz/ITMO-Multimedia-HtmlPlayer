@@ -93,6 +93,7 @@ function toggleAudio() {
     } else {
         audioElement.pause();
         playPauseSong.firstChild.src = "static/play.svg";
+        sliderUpdate();
     }
 }
 
@@ -123,8 +124,9 @@ function setAudio() {
     audioElement.src = songs_list[songIndex-1].path;
     nameSong.innerHTML = songs_list[songIndex-1].name;
     authorSong.innerHTML = songs_list[songIndex-1].author;
-    updateTimer = setInterval(sliderUpdate, 1000);
+    updateTimer = setInterval(sliderUpdate, 200);
     audioElement.load();
+    sliderUpdate();
 
 }
 

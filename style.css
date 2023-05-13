@@ -1,29 +1,39 @@
 #img-text {
     bottom: 0;
-    
-    padding: 10px;
+    width: 230pxs;
+    padding: 10px 30px;
     font-size: 18px;
+    border: white 2px solid;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 html {
+    position: relative;
+    z-index: -3;
     height: 100%;
 }
 body{
-    background-color: #fffded;
+    position: relative;
+    z-index: -2;
+    background-color: black;
     margin: 0;
     min-height: 100%;
     font-family: Arial;
+    color: white;
 }
 .container{
+    position: relative;
+    z-index: -1;
     min-width: 500px;
     width: 60%;
     margin: 0 auto;
-    background-color: #928ecd;
+    background-color: #143642;
     height: 100vh;
-    padding: 5% 0px;
+    padding: 5% 0 0 0;
     box-sizing: border-box;
 
-    box-shadow: inset -20px 0 22px rgba(94,104,121,0.3),
-                inset 20px 0 22px rgba(94,104,121,0.3);
+    box-shadow: inset -20px 0 22px rgba(0,0,0,0.3),
+                inset 20px 0 22px rgba(0,0,0,0.3);
 }
 .panels{
     width: 90%;
@@ -32,11 +42,8 @@ body{
 #img-panel {
     padding: 5px 10px 0 10px;
     height: 60px;
-    border: white 4px solid;
-    border-bottom-style: none;
-    border-radius: 10px 10px 0 0;
     width: 70%;
-    max-width: 450px;
+    max-width: 700px;
     margin: 10px auto 0 auto;
     
 }
@@ -83,13 +90,17 @@ body{
     margin-right: 10px;
     height: 60%;
     padding-left: 0.7em;
+    border-radius: 5px;
+    border: white 3px solid;
 }
 #timing-btn{
     height: 60%;
+    padding: 5px 10px;
     display: block;
-    background-color: white;
-    border: black 2px solid;
+    background-color: inherit;
+    border: white 3px solid;
     border-radius: 5px;
+    color: white;
 }
 #timing-btn:hover{
     background-color: #cccccc;
@@ -100,26 +111,28 @@ body{
 }
 
 .img-container{
-    margin: 30px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin: 30px auto;
+    width: fit-content;
+    box-shadow: inset 12px 11px 20px 0px rgb(0 0 0 / 50%),
+        inset -12px -11px 20px 0px rgb(0 0 0 / 50%)
 }
 #image{
+    display: block;
     height: 400px;
-    width: 400px;
+    width: 600px;
     object-fit: cover;
-    border-radius: 50px;
-    box-shadow:
-        11px 11px 20px 0 rgb(0 0 0 / 40%),
-        -11px -11px 20px 0 rgb(216 213 255 / 51%)
+    position: relative;
+    z-index: -2;
+
 }
 .ico{
-    height: 100%;
+    margin: 0 10px;
+    height: 80%;
     color: black;
     display: block;
 }
 .arrow{
+    margin: 0;
     height: 50%;
 }
 
@@ -131,6 +144,7 @@ body{
 .song-container{
     display: block;
     width: 300px;
+    color: white;
 }
 
 .song-name{
@@ -156,46 +170,26 @@ body{
 }
 
 .wave{
-    margin: auto 0;
-    height: 350px;
-    width: 200px;
+    margin:  auto;
+    width: 350px;
+    height: 200px;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: start;
 }
 
-.wave:last-child{
-    align-items: end;
-}
-
-.line1
+.line
 {
     background: #fffded;
 
-    max-width: 80%;
-    min-width: 12px;
-    width: 22px;
-    height: 20px;
+    max-height: 80%;
+    min-height: 12px;
+    height: 22px;
+    width: 20px;
 
-    border-radius: 0 10px 10px 0;
+    border-radius: 0  0 10px 10px;
 
-    margin: 2.5px 0;
-
-    transition: 0.1s ease-out;
-}
-.line2
-{
-    background: #fffded;
-
-    max-width: 80%;
-    min-width: 12px;
-    width: 22px;
-    height: 20px;
-
-    border-radius: 10px 0 0 10px;
-
-    margin: 2.5px 0;
+    margin: 0 2.5px;
 
     transition: 0.1s ease-out;
 }
@@ -207,8 +201,9 @@ body{
 .seek-slider
 {
     appearance: none;
-    height: 10px;
-    background: #ffffff;
+    height: 5px;
+    color:white;
+    background: #bbbbbb;
     transition: opacity .2s;
     border-radius: 10px;
     margin: 0;

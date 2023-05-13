@@ -130,10 +130,9 @@ function setAudio() {
 
 }
 
-let num, array, lines, analyser, src, width, context;
-lines1 = document.getElementsByClassName('line1');
-lines2 = document.getElementsByClassName('line2');
-num = lines1.length;
+let num, array, lines, analyser, src, height, context;
+lines = document.getElementsByClassName('line');
+num = lines.length;
 
 function loadEqualizer()
 {
@@ -157,14 +156,12 @@ function loop()
 
     for(var i = 0 ; i < num ; i++)
     {
-        width = array[i+num];
-        lines1[i].style.width = width-150 + '%';
-        lines2[i].style.width = width-150 + '%';
+        height = array[i+num];
+        lines[i].style.height = height-150 + '%';
 
         if(audioElement.paused)
         {
-            lines1[i].style.width = 0 + '%';
-            lines2[i].style.width = 0 + '%';
+            lines[i].style.height = 0 + '%';
         }
     }
 }

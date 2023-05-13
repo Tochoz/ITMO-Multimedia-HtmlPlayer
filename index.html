@@ -7,52 +7,27 @@
   </head>
   <body>
     <div class="container">
+      <div id="img-panel">
+        <div id="img-text"></div>
+        <div class="gap"></div>
+          <div id="prev-img" ><img class="ico arrow" src="static/left.svg"></div>
+          <div id="play-pause-img"><img class="ico" style="width: 48px" src="static/play.svg"></div>
+          <div id="next-img" style="transform: rotate(-180deg);"><img class="ico arrow" src="static/left.svg"></div>
+        <div class="gap"></div>
+        <input id="timing-input" type="number" min="1" max="10" value="2">
+        <button id="timing-btn">Изменить</button>
+      </div>
       <div class="img-container">
-        <div class="wave">
-              <span class="line1"></span>
-              <span class="line1"></span>
-              <span class="line1"></span>
-              <span class="line1"></span>
-              <span class="line1"></span>
-              <span class="line1"></span>
-              <span class="line1"></span>
-              <span class="line1"></span>
-              <span class="line1"></span>
-              <span class="line1"></span>
-          </div>
         <img id="image" src="">
-          <div class="wave">
-              <span class="line2"></span>
-              <span class="line2"></span>
-              <span class="line2"></span>
-              <span class="line2"></span>
-              <span class="line2"></span>
-              <span class="line2"></span>
-              <span class="line2"></span>
-              <span class="line2"></span>
-              <span class="line2"></span>
-              <span class="line2"></span>
-          </div>
       </div>
-    <div class="panels">  
-    <div id="img-panel">
-      <div id="img-text"></div>
-      <div class="gap"></div>
-        <div id="prev-img" ><img class="ico arrow" src="static/left.svg"></div>
-        <div id="play-pause-img"><img class="ico" src="static/play.svg"></div>
-        <div id="next-img"><img class="ico arrow" src="static/right.svg"></div>
-      <div class="gap"></div>
-      <input id="timing-input" type="number" min="1" max="10" value="2">
-      <button id="timing-btn">Set Timing</button>
-      </div>
-      
+    <div class="panels">
       <div id="song-panel">
       <input type="range" min="1" max="100" value="0" class="seek-slider" oninput="seekTo(this.value)" onchange="seekTo(this.value)">
         <div id="song-panel-cont">
           <audio id="audio-tag" crossorigin="anonymous"></audio>
           <div class="controls-container">
             <div id="prev-song"><img class="ico arrow" src="static/prevsong.svg"></div>
-            <div id="play-pause-song"><img class="ico" src="static/play.svg"></div>
+            <div id="play-pause-song" ><img class="ico" style="width: 48px" src="static/play.svg"></div>
             <div id="next-song"><img class="ico arrow" src="static/nextsong.svg"></div>
           </div>
           <div class="gap"></div>
@@ -64,6 +39,18 @@
           oninput="setVolume(this.value)" onchange="setVolume(this.value)">
         </div>
       </div>
+      <div class="wave">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+          </div>
     </div>
       <script src="script.js" defer></script>
     </div>

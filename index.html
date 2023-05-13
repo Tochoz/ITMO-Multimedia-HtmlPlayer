@@ -47,7 +47,7 @@
       </div>
       
       <div id="song-panel">
-      <input type="range" min="1" max="100" value="0" class="seek-slider" onchange="seekTo(this.value)">
+      <input type="range" min="1" max="100" value="0" class="seek-slider" oninput="seekTo(this.value)" onchange="seekTo(this.value)">
         <div id="song-panel-cont">
           <audio id="audio-tag" crossorigin="anonymous"></audio>
           <div class="controls-container">

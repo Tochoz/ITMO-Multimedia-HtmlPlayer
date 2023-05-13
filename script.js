@@ -124,7 +124,7 @@ function setAudio() {
     audioElement.src = songs_list[songIndex-1].path;
     nameSong.innerHTML = songs_list[songIndex-1].name;
     authorSong.innerHTML = songs_list[songIndex-1].author;
-    updateTimer = setInterval(sliderUpdate, 200);
+    updateTimer = setInterval(sliderUpdate, 1000);
     audioElement.load();
     sliderUpdate();
 
@@ -174,7 +174,10 @@ function setVolume(val) {
 }
 
 function seekTo(val){
+    clearInterval(updateTimer)
     audioElement.currentTime = audioElement.duration * (val / 100);
+    sliderUpdate()
+    updateTimer = setInterval(sliderUpdate, 1000);
 }
 
 function sliderUpdate(){

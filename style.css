@@ -1,6 +1,6 @@
 #img-text {
     bottom: 0;
-    width: 230pxs;
+    width: 230px;
     padding: 10px 30px;
     font-size: 18px;
     border: white 2px solid;
@@ -180,7 +180,7 @@ body{
 
 .line
 {
-    background: #fffded;
+    background: white;
 
     max-height: 80%;
     min-height: 12px;

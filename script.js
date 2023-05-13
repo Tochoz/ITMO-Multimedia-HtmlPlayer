@@ -153,8 +153,8 @@ function loop()
     for(var i = 0 ; i < num ; i++)
     {
         width = array[i+num];
-        lines1[i].style.width = width - 125 + '%';
-        lines2[i].style.width = width - 125 + '%';
+        lines1[i].style.width = (width - 125)*0.9 + '%';
+        lines2[i].style.width = (width - 125)*0.9 + '%';
 
         if(audioElement.paused)
         {
@@ -171,7 +171,7 @@ timingBtn.addEventListener("click", setTiming);
 playPauseSong.addEventListener("click", toggleAudio);
 nextSong.addEventListener("click", nextAudio);
 prevSong.addEventListener("click", prevAudio);
-audioElement.addEventListener('ended', nextAudio);
+audioElement.addEventListener('ended', nextAudio.then(togglePlayPause));
 
 showImage();
 loadEqualizer()

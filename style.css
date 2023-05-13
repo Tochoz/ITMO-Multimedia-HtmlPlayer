@@ -139,7 +139,7 @@ body{
 .wave{
     margin: auto 0;
     height: 300px;
-
+    width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

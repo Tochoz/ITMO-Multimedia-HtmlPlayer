@@ -21,11 +21,11 @@ let timing = timingInput.value * 1000;
 let updateTimer;
 
 const images_list = [
-    {path: "media/img/pexels-adrien-olichon-2931251.jpg", desc: "Абстракция 1"},
-    {path: "media/img/pexels-andre-william-2104499.jpg", desc: "Абстракция 2"},
-    {path: "media/img/pexels-anete-lusina-6331049.jpg", desc: "Абстракция 3"},
-    {path: "media/img/pexels-anni-roenkae-3109807.jpg", desc: "Абстракция 4"},
-    {path: "media/img/pexels-jonathan-borba-4431922.jpg", desc: "Абстракция 5"}
+    {path: "media/img/pexels-adrien-olichon-2931251.jpg", desc: "Чёрный песок"},
+    {path: "media/img/pexels-andre-william-2104499.jpg", desc: "Зелёный лист"},
+    {path: "media/img/pexels-anete-lusina-6331049.jpg", desc: "Листья"},
+    {path: "media/img/pexels-anni-roenkae-3109807.jpg", desc: "Абстракция"},
+    {path: "media/img/pexels-jonathan-borba-4431922.jpg", desc: "Барханы"}
 ];
 
 const songs_list = [

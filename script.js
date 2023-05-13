@@ -158,8 +158,8 @@ function loop()
     for(var i = 0 ; i < num ; i++)
     {
         width = array[i+num];
-        lines1[i].style.width = width/2.5 + '%';
-        lines2[i].style.width = width/2.5 + '%';
+        lines1[i].style.width = width-150 + '%';
+        lines2[i].style.width = width-150 + '%';
 
         if(audioElement.paused)
         {

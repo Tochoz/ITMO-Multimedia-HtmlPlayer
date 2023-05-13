@@ -171,7 +171,7 @@ body{
 
 .wave{
     margin:  auto;
-    width: 350px;
+    width: 500px;
     height: 200px;
     display: flex;
     justify-content: space-between;
@@ -185,7 +185,7 @@ body{
     max-height: 80%;
     min-height: 12px;
     height: 22px;
-    width: 20px;
+    width: 15px;
 
     border-radius: 0  0 10px 10px;
 
@@ -195,7 +195,12 @@ body{
 }
 
 #vol-control{
-    color: white;
+    appearance: none;
+    background: #bbbbbb;
+    height: 5px;
+    border-radius: 10px;
+
+
 }
 
 .seek-slider

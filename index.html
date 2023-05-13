@@ -22,7 +22,7 @@
       </div>
     <div class="panels">
       <div id="song-panel">
-      <input type="range" min="1" max="100" value="0" class="seek-slider" oninput="seekTo(this.value)" onchange="seekTo(this.value)">
+      <input type="range" min="1" max="100" value="0" class="seek-slider" oninput="seekTo(this.value)">
         <div id="song-panel-cont">
           <audio id="audio-tag" crossorigin="anonymous"></audio>
           <div class="controls-container">
@@ -35,11 +35,15 @@
           <div class="song-name"></div>
           <div class="song-author"></div>
           </div>
-          <input style="height: 30%;background: #ffffff;" id="vol-control" type="range" value="100" min="0" max="100" step="1"
+          <input style="" id="vol-control" type="range" value="100" min="0" max="100" step="1"
           oninput="setVolume(this.value)" onchange="setVolume(this.value)">
         </div>
       </div>
       <div class="wave">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
               <span class="line"></span>
               <span class="line"></span>
               <span class="line"></span>

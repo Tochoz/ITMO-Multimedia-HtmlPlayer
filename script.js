@@ -90,7 +90,7 @@ function toggleAudio() {
         loop();
     } else {
         audioElement.pause();
-        playPauseSong.firstChild.src = "static/play.svg";``
+        playPauseSong.firstChild.src = "static/play.svg";
     }
 }
 
@@ -118,16 +118,17 @@ function setAudio() {
         playPauseSong.firstChild.src = "static/play.svg";``
     }
     audioElement.src = songs_list[songIndex-1].path;
-    audioElement.load();
-    
     nameSong.innerHTML = songs_list[songIndex-1].name;
     authorSong.innerHTML = songs_list[songIndex-1].author;
 
+    audioElement.load();
+
 }
 
-let num, array, lines, analyser, src, height, context;
-lines = document.getElementsByClassName('line');
-num = lines.length;
+let num, array, lines, analyser, src, width, context;
+lines1 = document.getElementsByClassName('line1');
+lines2 = document.getElementsByClassName('line2');
+num = lines1.length;
 
 function loadEqualizer()
 {
@@ -151,12 +152,14 @@ function loop()
 
     for(var i = 0 ; i < num ; i++)
     {
-        height = array[i+num];
-        lines[i].style.height = height - 125 + '%';
+        width = array[i+num];
+        lines1[i].style.width = width - 125 + '%';
+        lines2[i].style.width = width - 125 + '%';
 
         if(audioElement.paused)
         {
-            lines[i].style.height = 0 + '%';
+            lines1[i].style.width = 0 + '%';
+            lines2[i].style.width = 0 + '%';
         }
     }
 }

@@ -8,7 +8,7 @@ html {
     height: 100%;
 }
 body{
-    background-color: #FEFAE0;
+    background-color: #fffded;
     margin: 0;
     min-height: 100%;
     font-family: Arial;
@@ -17,10 +17,13 @@ body{
     min-width: 500px;
     width: 60%;
     margin: 0 auto;
-    background-color: #606C38;
+    background-color: #928ecd;
     height: 100vh;
     padding: 5% 0px;
     box-sizing: border-box;
+
+    box-shadow: inset -20px 0 22px rgba(94,104,121,0.3),
+                inset 20px 0 22px rgba(94,104,121,0.3);
 }
 .panels{
     width: 90%;
@@ -29,7 +32,7 @@ body{
 #img-panel {
     padding: 5px 10px 0 10px;
     height: 60px;
-    border: black 4px solid;
+    border: white 4px solid;
     border-bottom-style: none;
     border-radius: 10px 10px 0 0;
     width: 70%;
@@ -48,11 +51,12 @@ body{
 
 #song-panel{
     padding: 5px 10px;
-    border: black 4px solid;
+    border: white 4px solid;
     border-radius: 10px;
     margin: 0 auto;
     max-width: 640px;
     height: 70px;
+    justify-content: space-evenly;
 }
 #song-panel > * {
     height: 60px;
@@ -82,15 +86,19 @@ body{
 }
 
 .img-container{
-    margin: 30px auto;
-    width: fit-content;
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 #image{
     height: 400px;
     width: 400px;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 50px;
+    box-shadow:
+        11px 11px 20px 0 rgb(0 0 0 / 40%),
+        -11px -11px 20px 0 rgb(216 213 255 / 51%)
 }
 .ico{
     height: 100%;
@@ -108,7 +116,6 @@ body{
 
 .song-container{
     display: block;
-    color: white;
     width: 300px;
 }
 
@@ -130,27 +137,46 @@ body{
 }
 
 .wave{
-    margin: 0 auto;
-    width: 180px;
-    height: 60px;
+    margin: auto 0;
+    height: 300px;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
 }
 
-.line
+.wave:last-child{
+    align-items: end;
+}
+
+.line1
 {
-    background: #f1f1f1;
+    background: #fffded;
 
-    max-height: 60px;
-    min-height: 12px;
-    height: 12px;
-    width: 10px;
+    max-width: 60px;
+    min-width: 12px;
+    width: 22px;
+    height: 20px;
 
-    border-radius: 50px;
+    border-radius: 0 5px 5px 0;
 
-    margin: 0 2.5px;
+    margin: 2.5px 0;
 
-    transition: 0.15s ease-out;
+    transition: 0.1s ease-out;
+}
+.line2
+{
+    background: #fffded;
+
+    max-width: 70px;
+    min-width: 12px;
+    width: 22px;
+    height: 20px;
+
+    border-radius: 5px 0 0 5px;
+
+    margin: 2.5px 0;
+
+    transition: 0.1s ease-out;
 }

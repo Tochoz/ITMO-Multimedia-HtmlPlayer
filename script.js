@@ -29,8 +29,8 @@ const images_list = [
 ];
 
 const songs_list = [
-    {path: "media/audio/atomic_heart_02. Trava u Doma (Geoffrey Day Remix).mp3", name: "Трава у дома (Geoffrey Day Remix)", author: "Земляне"},
     {path: "media/audio/dvrst-igor-sklyar-atomic-heart-komarovo-dvrst-phonk-remix-mp3.mp3", name: "Комарово (DVRST Phonk Remix)", author: "Игорь Скляр"},
+    {path: "media/audio/atomic_heart_02. Trava u Doma (Geoffrey Day Remix).mp3", name: "Трава у дома (Geoffrey Day Remix)", author: "Земляне"},
     {path: "media/audio/geoffplaysguitar-alla-pugacheva-atomic-heart-arlekino-geoffrey-day-remix-mp3.mp3", name: "Арлекино (Geoffrey Day Remix)", author: "Алла Пугачёва"},
 ]
 

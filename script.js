@@ -171,7 +171,10 @@ timingBtn.addEventListener("click", setTiming);
 playPauseSong.addEventListener("click", toggleAudio);
 nextSong.addEventListener("click", nextAudio);
 prevSong.addEventListener("click", prevAudio);
-audioElement.addEventListener('ended', nextAudio.then(togglePlayPause));
+audioElement.addEventListener('ended', () => {
+    nextAudio.then;
+    togglePlayPause();
+    });
 
 showImage();
 loadEqualizer()

@@ -173,7 +173,7 @@ nextSong.addEventListener("click", nextAudio);
 prevSong.addEventListener("click", prevAudio);
 audioElement.addEventListener('ended', () => {
     nextAudio();
-    togglePlayPause();
+    toggleAudio();
     });
 
 showImage();

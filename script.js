@@ -12,11 +12,13 @@ const playPauseSong = document.getElementById("play-pause-song");
 const nextSong = document.getElementById("next-song");
 const nameSong = document.querySelector(".song-name");
 const authorSong = document.querySelector(".song-author");
+const seek_slider = document.querySelector(".seek-slider");
 
 let imageIndex = 1;
 let songIndex = 1;
 let timerId = null;
 let timing = timingInput.value * 1000;
+let updateTimer;
 
 const images_list = [
     {path: "media/img/pexels-adrien-olichon-2931251.jpg", desc: "Абстракция 1"},
@@ -113,6 +115,7 @@ function prevAudio() {
 }
 
 function setAudio() {
+    clearInterval(updateTimer)
     if (!audioElement.paused) {
         audioElement.pause();
         playPauseSong.firstChild.src = "static/play.svg";``
@@ -120,7 +123,7 @@ function setAudio() {
     audioElement.src = songs_list[songIndex-1].path;
     nameSong.innerHTML = songs_list[songIndex-1].name;
     authorSong.innerHTML = songs_list[songIndex-1].author;
-
+    updateTimer = setInterval(sliderUpdate, 1000);
     audioElement.load();
 
 }
@@ -153,8 +156,8 @@ function loop()
     for(var i = 0 ; i < num ; i++)
     {
         width = array[i+num];
-        lines1[i].style.width = (width - 125)*0.9 + '%';
-        lines2[i].style.width = (width - 125)*0.9 + '%';
+        lines1[i].style.width = (width - 135)*0.9 + '%';
+        lines2[i].style.width = (width - 135)*0.9 + '%';
 
         if(audioElement.paused)
         {
@@ -163,6 +166,23 @@ function loop()
         }
     }
 }
+
+function setVolume(val) {
+    audioElement.volume = val / 100;
+}
+
+function seekTo(val){
+    audioElement.currentTime = audioElement.duration * (val / 100);
+}
+
+function sliderUpdate(){
+    let seekPosition = 0;
+    if(!isNaN(audioElement.duration)){
+        seekPosition = audioElement.currentTime * (100 / audioElement.duration);
+        seek_slider.value = seekPosition;
+    }
+}
+
 
 prevImg.addEventListener("click", showPrevImage);
 nextImg.addEventListener("click", showNextImage);
